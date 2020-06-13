@@ -8,7 +8,7 @@ Spam-Sec-Check, short for spam security check is a simple script against very po
 **Do not** expect this script to work on most websties. It was created to exploit a test website hosted locally. 
 
 The intent of the script was made to jam up the hosts inbox so that the messages sent are indistinguishable from real customers, thus crippling their business through email.
-because of this, the script was written to send a thousand messages, but caan easily be manipulated to send many more.
+Because of this, the script was written to send a thousand messages, but caan easily be manipulated to send many more.
 
 ### What I have learned in this project list
 - the use of `random.choice()` to choose a random item from an array
