@@ -12,5 +12,5 @@ because of this, the script was written to send a thousand messages, but caan ea
 
 ### What I have learned in this project list
 - the use of `random.choice()` to choose a random item from an array
-- went down a learning "rabit-hole" while troubleshooting uploading code to the wrong branch.
+- went down a learning "rabit-hole" with git while troubleshooting uploading code to the wrong branch.
 - familiarized myself with git.
