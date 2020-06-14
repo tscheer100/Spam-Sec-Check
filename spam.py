@@ -1,11 +1,12 @@
-from selenium import webdriver
-import requests
+import json
 import os
 import random
 import string
-import json
-import bs4
 import time
+
+import bs4
+import requests
+from selenium import webdriver
 
 chars = string.ascii_letters + string.digits + '!@#%^*()'
 random.seed = (os.urandom(1854))
@@ -57,9 +58,4 @@ for name in names:
     time.sleep(1)
     driver.get("https://127.0.0.1/contact")
     time.sleep(1)
-
-    
-
-    
-
 
