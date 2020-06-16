@@ -55,7 +55,7 @@ for name in names:
     # some people have terrible security with static spam checkers. 
     driver.find_element_by_id("AntiSpam").send_keys("77")
 
-    # driver.find_element_by_xpath('//*[@type="submit"]').click()
+    driver.find_element_by_xpath('//*[@type="submit"]').click()
 
     time.sleep(1)
     driver.get("https://127.0.0.1/contact")
