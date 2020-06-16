@@ -22,21 +22,28 @@ speech = json.loads(open("speech.json").read())
 words = json.loads(open("words.json").read())
 emailList = ["@gmail.com","@yahoo.com", "@hotmail.com", "@outlook.com"]
 
+def randName():
+    rand_name = random.choice(names)
+    return rand_name    
+
+def randEmail(name):
+    email = name + random.choice(string.digits) + random.choice(emailList)
+    return email
+
 def randTitle(): 
     title = ""
     for x in range(5):
-        title = title + " " + random.choice(words)
+        title = title + random.choice(words) + " "
     return title
 
-
 for name in names:
-    full_name = name + " " + random.choice(names)
-    driver.find_element_by_id("Full_Name").send_keys(full_name)
+    
+    first = randName()
+    last = randName()
+    driver.find_element_by_id("Full_Name").send_keys(first + " " + last)
 
     time.sleep(0.1)
-    name_extra = ''.join(random.choice(string.digits))
-    email = name.lower() + name_extra + random.choice(emailList)
-    driver.find_element_by_id("Email_Address").send_keys(email)
+    driver.find_element_by_id("Email_Address").send_keys(randEmail(first))
 
     time.sleep(0.1)
     driver.find_element_by_id("Subject_Matter").send_keys(randTitle())
@@ -51,5 +58,5 @@ for name in names:
     # driver.find_element_by_xpath('//*[@type="submit"]').click()
 
     time.sleep(1)
-    driver.get("https:127.0.0.1/contact")
+    driver.get("https://127.0.0.1/contact")
     time.sleep(1)
