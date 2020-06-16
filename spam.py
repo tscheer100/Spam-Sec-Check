@@ -4,12 +4,7 @@ import random
 import string
 import time
 
-import bs4
-import requests
 from selenium import webdriver
-
-chars = string.ascii_letters + string.digits + '!@#%^*()'
-random.seed = (os.urandom(1854))
 
 # I just looked up the top thousand baby names of 2019 for this one.
 names = json.loads(open("names.json").read())
@@ -53,9 +48,8 @@ for name in names:
     # some people have terrible security with static spam checkers. 
     driver.find_element_by_id("AntiSpam").send_keys("77")
 
-    driver.find_element_by_xpath('//*[@type="submit"]').click()
+    # driver.find_element_by_xpath('//*[@type="submit"]').click()
 
     time.sleep(1)
-    driver.get("https://127.0.0.1/contact")
+    driver.get("https:127.0.0.1/contact")
     time.sleep(1)
-
