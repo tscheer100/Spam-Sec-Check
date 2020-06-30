@@ -10,6 +10,11 @@ Spam-Sec-Check, short for spam security check is a simple script against very po
 The intent of the script was made to jam up the hosts inbox so that the messages sent are indistinguishable from real customers, thus crippling their business through email.
 Because of this, the script was written to send a thousand messages, but caan easily be manipulated to send many more.
 
+# Requirements
+- Python
+- Selenium
+- Google Chrome version 78
+
 ### What I have learned in this project list
 - the use of `random.choice()` to choose a random item from an array
 - went down a learning "rabit-hole" with git while troubleshooting uploading code to the wrong branch.
